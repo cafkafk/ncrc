@@ -14,7 +14,7 @@ that was *STRONGLY DISCOURAGED*.
 
 My reasoning: I wanted the copyright so I could GPL whatever I made.
 
-In order to make it interesting, my idea was to crate a IRC clone that didn't
+In order to make it interesting, my idea was to create a IRC clone that didn't
 need any "client" in order to connect. It was a two parts assignment thou, and
 it turned out that after the first part of making the nameserver, the second
 part required the client conformed to several rules... so I had to also write a
