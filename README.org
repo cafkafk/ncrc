@@ -1,0 +1,96 @@
+#+title: NetCat Relay Chat
+#+author: Christina E. Sørensen
+
+* [#C] What is this?
+When I studied mathematics at UCPH, I took a lot of compsci electives. One of
+those was CompSys (Computer Systems). One Of assignments was to write a IRC
+clone.
+
+This is a program I made in fall 2020, implementing a IRC like clone that can be
+connected to via netcat, and isn't a giant pain to do so with.
+
+The groups where supposed to be 3 people --- I went at it alone --- something
+that was *STRONGLY DISCOURAGED*.
+
+My reasoning: I wanted the copyright so I could GPL whatever I made.
+
+In order to make it interesting, my idea was to crate a IRC clone that didn't
+need any "client" in order to connect. It was a two parts assignment thou, and
+it turned out that after the first part of making the nameserver, the second
+part required the client conformed to several rules... so I had to also write a
+client... /sigh/
+
+I made this. Felt it was kinda neat. Sadly, it required GCC 12, and the TA used
+GCC 11 and couldn't compile it. I failed the assignment. Then, I told him to
+upgrade, he did, it worked... but the grade was given already given.
+
+Moral of the story?
+
+...
+
+
+* Build
+You first clone the repo. Then, you simply run:
+#+begin_src sh
+$ make
+#+end_src
+
+That's it. Now the binaries should be in =./bin/=.
+
+* Usage
+In order to use it, you have to build it. If you have done that, and you're in
+the root of the repository, you can launch the namesever like this:
+#+begin_src sh
+$ ./bin/name_server 3000
+#+end_src
+
+$3000$ is the port number. I've tested this again now, and it seems I could only
+get port =3000= to work. I'm sorry, but I didn't fix this. And I won't :d
+
+In order to connect with the peer:
+#+begin_src sh
+$ ./bin/peer 127.0.0.1 3000
+#+end_src
+
+If you wanna see all the magical things you can do, I'll add a demo soon.
+
+You can add users to the account.txt file, following the format.
+
+* Is this representative of your C skills
+No, I've gotten both better and worse since. I'm a better programmer in general
+thou... I hope :')
+
+I feel like the code is particularly messy, the comment are way past verbose
+(which was nescesarry to communicate intent to the TA), and the way I do logging
+is a bit ugly.
+
+Also, I suppose that I'd have moved more logic out to it's own file.
+
+But still, for one of my first serious C program, I am kinda retroactively proud
+of myself for having made this cute mess.
+
+* What would I change
+Everything, the architecture, the language (rust <3), the logging is weird, the
+argument parsing, and all the things that annoyed me that I had to do to conform
+to spec.
+
+Ohh, and I would have never made a client!
+
+* No git log
+Sorry.
+
+* Top Comments
+#+begin_src c
+/* User repurposed for messages I know it is
+ * disgusting^w brilliant, no worries. */
+#+end_src
+
+#+begin_src c
+#define MAX_NICK 2048     /* FIXME This is extremly stupid */
+#+end_src
+
+#+begin_src c
+// This is wierd but just roll with it for now
+#define ERROR_OK "MSG OK\n"
+#define ERROR_FAIL "MSG FAIL\n"
+#+end_src

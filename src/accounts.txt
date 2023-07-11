@@ -1,0 +1,6 @@
+admin password localhost 8000 
+test test a a 
+a a a a 
+AzureDiamond hunter2 0.0.0.0 1337 
+lambda lambda 10.10.10.10 6000 
+duck duck 192.192.192.192 1 
