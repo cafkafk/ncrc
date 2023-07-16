@@ -3,7 +3,7 @@
 
 * What is this?
 When I studied mathematics at UCPH, I took a lot of compsci electives. One of
-those was CompSys (Computer Systems). One Of assignments was to write a IRC
+those was CompSys (Computer Systems). One of the assignments was to write a IRC
 clone.
 
 This is a program I made in fall 2020, implementing a IRC like clone that can be
