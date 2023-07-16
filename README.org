@@ -9,23 +9,6 @@ clone.
 This is a program I made in fall 2020, implementing a IRC like clone that can be
 connected to via netcat, and isn't a giant pain to do so with.
 
-The groups where supposed to be 3 people --- I went at it alone --- something
-that was *STRONGLY DISCOURAGED*.
-
-My reasoning: I wanted the copyright so I could GPL whatever I made.
-
-In order to make it interesting, my idea was to create a IRC clone that didn't
-need any "client" in order to connect. It was a two parts assignment thou, and
-it turned out that after the first part of making the nameserver, the second
-part required the client conformed to several rules... so I had to also write a
-client... /sigh/
-
-I made this. Felt it was kinda neat. Sadly, it required GCC 12, and the TA used
-GCC 11 and couldn't compile it. I failed the assignment. Then, I told him to
-upgrade, he did, it worked... but the grade was given already given.
-
-Moral of the story?
-
 ...
 
 
@@ -76,21 +59,3 @@ to spec.
 
 Ohh, and I would have never made a client!
 
-* No git log
-Sorry.
-
-* Top Comments
-#+begin_src c
-/* User repurposed for messages I know it is
- * disgusting^w brilliant, no worries. */
-#+end_src
-
-#+begin_src c
-#define MAX_NICK 2048     /* FIXME This is extremly stupid */
-#+end_src
-
-#+begin_src c
-// This is wierd but just roll with it for now
-#define ERROR_OK "MSG OK\n"
-#define ERROR_FAIL "MSG FAIL\n"
-#+end_src
